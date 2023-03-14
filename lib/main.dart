@@ -1,25 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:zong_app/routes/MyHomePage.dart';
 
+import 'constants/constants.dart';
+
 void main() {
   runApp(MyApp());
 }
-
-MaterialColor myColor = const MaterialColor(
-    0xFF93c01d,
-    <int, Color>{
-      50: Color(0xFF93c01d),
-      100:  Color(0xFF93c01d),
-      200:  Color(0xFF93c01d),
-      300:  Color(0xFF93c01d),
-      400:  Color(0xFF93c01d),
-      500:  Color(0xFF93c01d),
-      600:  Color(0xFF93c01d),
-      700:  Color(0xFF93c01d),
-      800:  Color(0xFF93c01d),
-      900:  Color(0xFF93c01d),
-    },
-  );
 
 class MyApp extends StatelessWidget {
 
@@ -27,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Zong App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: myColor,
+        primarySwatch: kMyColor,
       ),
       home: MyHomePage(),
     );
